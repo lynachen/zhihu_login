@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Myzhihu_login</title>
+	<link type="text/css" rel="stylesheet" href="css/zhihu_login.css" />
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+	<script src="scripts/zhihu_login.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div>
+			<img src="css/images/zhihu_logo.png" />
+			<h2>与世界分享你的知识、经验和见解</h2>
+		</div>
+		<nav class="switch_nav">
+			<a href="#" id="switch_signup" class="switch_btn_focus">注册</a>
+			<a href="#" id="switch_login" class="switch_btn">登陆</a>
+			<div class="switch_bottom" id="switch_bottom"></div>
+		</nav>
+		<div id="signup">
+			<div class="group_input">
+				<div class="name"><input type="text" placeholder="姓名" /></div>
+				<div class="phone"><input type="text" placeholder="手机号（仅支持中国大陆）" /></div>
+				<div class="psd"><input type="password" placeholder="密码（不少于6位）" /></div>
+			</div>
+			<button type="submit" class="submit_btn">注册知乎</button>
+			<span class="agreement-tip">点击「注册」按钮，即代表你同意<a href="#">《知乎协议》</a></span>
+		</div>
+		<div id="login">
+			<div class="group_input">
+				<input type="text" placeholder="手机号或邮箱" />
+				<input type="password" placeholder="密码" />
+			</div>
+			<button type="submit" class="submit_btn">登陆</button>
+			<div class="states">
+				<span class="left"><a href="#">手机验证码登陆</a></span>
+				<span class="right"><a href="#">无法登陆？</a></span>
+			</div>
+			<div class="states">
+				<a href="#" class="social_account">社交账号登陆</a>
+				<div class="states three_MinIcon">
+					<a href="#" class="MinIcon_weixin"><img src="css/images/icon_weixin.jpg" style="width:20px;height:18px" /></a>
+					<a href="#" class="MinIcon_weibo"><img src="css/images/icon_weibo.jpg" style="width:20px;height:18px" /></a>
+					<a href="#" class="MinIcon_qq"><img src="css/images/icon_qq.jpg" style="width:20px;height:18px" /></a>
+				</div>
+			</div>
+		</div>
+		<div class="QRcode_btn">
+			<div type="submit" class="submit_btn download_btn">下载知乎App</div>
+			<div class="QRcode">
+				<img src="css/images/QRcode.png" alt="QRcode" />
+				<div class="box"></div>
+				<!--<div class="box">
+				<div class="box1"></div>
+				<div class="box2"></div>
+				</div>-->
+			</div>
+
+		</div>
+  
+	</div>
+	<div id="footer">
+		<span>&copy;2017知乎</span><span>·</span><a href="#">知乎圆桌</a><span>·</span><a href="#">发现</a><span>·</span><a href="#">移动应用</a><span>·</span><a href="#">使用机构账号登录</a><span>·</span><a href="#">联系我们</a><span>·</span><a href="#">工作来知乎</a><br />
+		<span>·</span><a href="#">京ICP证110745号</a><span>·</span><span>京公网安备11010802010035号</span><span>·</span><a href="#">出版物经营许可证</a>
+	</div>
+</body>
+</html>
