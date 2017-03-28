@@ -1,8 +1,7 @@
-# zhihu_login
+# zhihu_login（仿知乎登录注册页面）
 
-模仿知乎登录注册页面
 
-点击查看静态页面：https://lynachen.github.io/zhihu_login/zhihu_login.html
+[静态页面演示链接](https://lynachen.github.io/zhihu_login/zhihu_login.html)
 
 ![zhihu_login](css/images/signup.png)
 
