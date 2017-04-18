@@ -41,3 +41,25 @@ parentEl.appendChild(newEl);
 parentEl.insertBefore(newEl,targetEl.nextSibling); 
 } 
 } 
+function myFunction(){
+var inputs = document.getElementsByTagName("input");
+for(var i=0;i<inputs.length;i++) {
+	inputs[i].onblur = function(){
+		if(this.value == null || this.value == ""){
+			var cleanlbl = this.nextSibling;
+			cleanlbl.parentNode.removeChild(cleanlbl);
+			var lbl = document.createElement("label");
+			lbl.innerHTML = "请填写姓名";
+			lbl.style.color = "red";
+			insertAfter(lbl,this);
+		} else{
+			var cleanlbl = this.nextSibling;
+			cleanlbl.parentNode.removeChild(cleanlbl);
+			var lbl = document.createElement("label");
+			lbl.innerHTML = "填写正确";
+			lbl.style.color = "green";
+			insertAfter(lbl,this);			
+		}
+	}
+}
+}
