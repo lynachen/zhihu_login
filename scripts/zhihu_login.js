@@ -29,3 +29,15 @@ $(function(){
 		}
 	});	
 });
+
+function insertAfter(newEl, targetEl) 
+{ 
+var parentEl = targetEl.parentNode; 
+if(parentEl.lastChild == targetEl) 
+{ 
+parentEl.appendChild(newEl); 
+}else 
+{ 
+parentEl.insertBefore(newEl,targetEl.nextSibling); 
+} 
+} 
