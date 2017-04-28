@@ -1,4 +1,5 @@
 
+
 $(function(){
 	$("#switch_signup").click(function(){
 		$("#switch_signup").removeClass("switch_btn").addClass("switch_btn_focus");
@@ -30,3 +31,75 @@ $(function(){
 	});	
 });
 
+
+			function insertAfter(newEl,targetEl){
+				 var parentEl = targetEl.parentNode;
+				 if(parentEl.lastChild == targetEl){
+				 	parentEl.appendChild(newEl);
+				 } else{
+				 	parentEl.insertBefore(newEl,targetEl.nextSibling);
+				 }
+			}
+
+			var name1 = document.getElementById("name1");
+			var ph1 = document.getElementById("ph1");
+			var psd1 = document.getElementById("psd1");
+
+			name1.onblur = function(){
+				if(this.value ==null||this.value ==""){
+					var cleanlbl = this.nextSibling;
+					cleanlbl.parentNode.removeChild(cleanlbl);
+					var lbl = document.createElement('lable');
+					lbl.innerHTML = "请填写姓名";
+					lbl.style.color = "#c00";
+					insertAfter(lbl, this);
+				} else{
+					var cleanlbl = this.nextSibling;
+					cleanlbl.parentNode.removeChild(cleanlbl);
+					var lbl = document.createElement('lable');
+					lbl.innerHTML = "√";
+					lbl.style.color = "#c00";
+					insertAfter(lbl, this);					
+				}
+			}
+
+			ph1.onblur = function(){
+				if(this.value ==null||this.value ==""){
+					var cleanlbl = this.nextSibling;
+					cleanlbl.parentNode.removeChild(cleanlbl);
+					var lbl = document.createElement('lable');
+					lbl.innerHTML = "请填写手机号";
+					lbl.style.color = "#c00";
+					insertAfter(lbl, this);					
+				} else{
+					var cleanlbl = this.nextSibling;
+					cleanlbl.parentNode.removeChild(cleanlbl);
+					var lbl = document.createElement('lable');
+					lbl.innerHTML = "√";
+					lbl.style.color = "#c00";
+					insertAfter(lbl, this);						
+				}
+			}
+
+			psd1.onblur = function(){
+				if(this.value.length<6){
+					var cleanlbl = this.nextSibling;
+					cleanlbl.parentNode.removeChild(cleanlbl);
+					var lbl = document.createElement('lable');
+					lbl.innerHTML = "请填写密码（不少于6位）";
+					lbl.style.color = "#c00";
+					insertAfter(lbl, this);
+				} else{
+					var cleanlbl = this.nextSibling;
+					cleanlbl.parentNode.removeChild(cleanlbl);
+					var lbl = document.createElement('lable');
+					lbl.innerHTML = "√";
+					lbl.style.color = "#c00";
+					insertAfter(lbl, this);					
+				}
+			}
+
+							
+
+
+							
