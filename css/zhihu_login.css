@@ -159,7 +159,7 @@ h2{
 	border-left:20px solid transparent;
 	border-right: 20px solid transparent;
 	border-top:20px solid #fff;
-	filter: drop-shadow(1px 1px 5px #878787);  /*ie暂不支持*/
+	filter: drop-shadow(1px 1px 5px #878787);
 	left:50%;
 	bottom:10px;
 	overflow: hidden;
