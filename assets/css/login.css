@@ -20,7 +20,7 @@ body,ul,ol,li,h1,h2,h3,h4,h5,p{
 a{
 	text-decoration: none;
 }
-#container{
+#wrapper{
 	width:300px;
 	margin-left:auto;
 	margin-right:auto;
@@ -44,7 +44,7 @@ h2{
 .switch_nav a:hover{
 	color: #555;
 }
-.switch_nav .switch_btn_focus{
+.switch_nav .switch_btn.on{
 	color: #0f88eb;
 	border-bottom: 2px solid #0f88eb;
 }
@@ -60,7 +60,10 @@ h2{
 	color:#878787;
 	text-decoration: none; 
 }
-
+.group_input {
+	position: relative;
+	text-align: left;
+}
 .group_input input{
 	width: 274px;
 	padding: 16px 12px;
@@ -69,18 +72,39 @@ h2{
 	border-radius: 3px;
 	background-color: #fff;
 }
-
-#signup .agreement-tip{
+.group_input li {
+	width: 800px;
+	position: relative;
+}
+.group_input li .msg {
+    position: absolute;
+    left: 306px;  
+}
+.group_input li .msg.onError {
+	height: 50px;
+	line-height: 50px;
+	font-size: 12px;
+	color: red;
+}
+.group_input li .msg.onSuccess {
+    background: #f7fafc url(../img/reg_bg.png) no-repeat;
+    background-position: -9px -4px;
+    color: transparent;
+    width: 18px;
+    height: 18px;
+    top: 14px;
+}
+.agreement-tip{
 	font-size: 90%;
 	color: #878787;
 }
 
-#signup{
+/*#signup{
 	display: block;
 }
 #login{
 	display: none;
-}
+}*/
 
 .states{
 	position: relative;
@@ -161,7 +185,7 @@ h2{
 	border-top:20px solid #fff;
 	filter: drop-shadow(1px 1px 5px #878787);
 	left:50%;
-	bottom:10px;
+	bottom:0;
 	overflow: hidden;
 	z-index: 1;
 	
