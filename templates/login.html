@@ -3,10 +3,13 @@
 <head>
 	<meta charset="UTF-8" />
 	<title>登陆</title>
+	<link rel="stylesheet" href="../assets/libs/particles/css/style.css">
 	<link rel="stylesheet" href="../assets/css/base.css">
-	<link type="text/css" rel="stylesheet" href="../assets/css/login.css" />
+	<link rel="stylesheet" href="../assets/css/login.css" />
 </head>
 <body>
+	<!-- particles.js container -->
+	<div id="particles-js"></div>
 	<div id="wrapper">
 		<div>
 			<img src="../assets/img/zhihu_logo.png" />
@@ -50,13 +53,34 @@
 			</div>
 
 		</div>
-  
-	</div>
-	<div id="footer">
-		<span>&copy;2017知乎</span><span>·</span><a href="javascript:;">知乎圆桌</a><span>·</span><a href="javascript:;">发现</a><span>·</span><a href="javascript:;">移动应用</a><span>·</span><a href="javascript:;">使用机构账号登录</a><span>·</span><a href="javascript:;">联系我们</a><span>·</span><a href="javascript:;">工作来知乎</a><br />
-		<span>·</span><a href="javascript:;">京ICP证110745号</a><span>·</span><span>京公网安备11010802010035号</span><span>·</span><a href="javascript:;">出版物经营许可证</a>
+		<div id="footer">
+			<span>&copy;2017知乎</span><span>·</span><a href="javascript:;">知乎圆桌</a><span>·</span><a href="javascript:;">发现</a><span>·</span><a href="javascript:;">移动应用</a><span>·</span><a href="javascript:;">使用机构账号登录</a><span>·</span><a href="javascript:;">联系我们</a><span>·</span><a href="javascript:;">工作来知乎</a><br />
+			<span>·</span><a href="javascript:;">京ICP证110745号</a><span>·</span><span>京公网安备11010802010035号</span><span>·</span><a href="javascript:;">出版物经营许可证</a>
+		</div>
 	</div>
 	<script src="../assets/libs/jquery-1.12.4/jquery.min.js"></script>
+	<script src="../assets/libs/particles/particles.min.js"></script>
+	<script src="../assets/libs/particles/js/app.js"></script>
+	<script src="../assets/libs/particles/js/lib/stats.js"></script>
+	<script>
+		var count_particles, stats, update;
+		stats = new Stats;
+		stats.setMode(0);
+		stats.domElement.style.position = 'absolute';
+		stats.domElement.style.left = '0px';
+		stats.domElement.style.top = '0px';
+		document.body.appendChild(stats.domElement);
+		count_particles = document.querySelector('.js-count-particles');
+		update = function() {
+			stats.begin();
+			stats.end();
+			if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+				count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+			}
+			requestAnimationFrame(update);
+		};
+		requestAnimationFrame(update);
+	</script>
 	<script>
 		$(".download_btn").click(function(){
 			if($(".QRcode").css("display")=="none"){
