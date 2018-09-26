@@ -89,7 +89,7 @@ h2{
 	height: 50px;
 	line-height: 50px;
 	font-size: 12px;
-	color: rgba(255,255,255.7);
+	color: red;
 }
 .group_input li .msg.onSuccess {
     background: #f7fafc url(../img/reg_bg.png) no-repeat;
